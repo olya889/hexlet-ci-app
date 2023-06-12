@@ -1,3 +1,5 @@
+name: ci-app-check
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,5 +9,5 @@ jobs:
     -run: make setup
     -run: make lint
     -run: make test
-    
+
     
