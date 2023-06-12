@@ -1,13 +1,13 @@
 name: ci-app-check
 on: push
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
     -run: make setup
+    -run: make test   
     -run: make lint
-    -run: make test
-
-    
+    runs:
+  using: 'node18'
