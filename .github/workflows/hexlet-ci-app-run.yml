@@ -1,7 +1,8 @@
 name: ci-app-check
 on: push
+
 jobs:
-  setup:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -10,7 +11,7 @@ jobs:
     run: make setup
     - name: test
     run: make test   
-    - name: litn
+    - name: lint
     run: make lint
     runs:
   using: 'node18'
